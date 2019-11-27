@@ -1,0 +1,26 @@
+##### PYTHON #####
+CREER un environnement virtuel:
+python3 -m venv --system-site-packages ./virtualEnv
+
+CHARGER un environnement virtuel:
+source ./virtualEnv/bin/activate
+
+INSTALLER module python:
+python3 -m pip install --user pydotplus
+
+INSTALLER module dans virtual env:
+python3 -m pip install pydotplus
+
+PROFILE
+python3 -m pyprof2calltree -k -r script
+
+
+###### C++ #####
+rm callgrind.out.*
+g++ -g ../Main.cpp
+valgrind --tool=callgrind ./a.out
+kcachegrind
+
+g++ -g ../Main.cpp
+valgrind --leak-check=yes ./a.out
+
